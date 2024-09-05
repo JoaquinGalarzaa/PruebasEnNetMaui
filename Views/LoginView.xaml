@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="ProbandoEnNetMaui.Views.LoginView"
+             Title="Inicio">
+    <Grid RowDefinitions=".3*,.7*">
+        <Image Aspect="AspectFill" Source="fondo.jpg"></Image>
+        <Grid BackgroundColor="#1A2421" Opacity=".9">
+        </Grid>
+        <Grid ColumnDefinitions="10*, 0*">
+            <Image Aspect="AspectFill"
+                   HeightRequest="100"
+                   WidthRequest="250"
+                   Source="logofutbol.png">
+            </Image>
+        </Grid>
+        <Grid Grid.Row="1">
+            <RoundRectangle Margin="-5,-25,-5,0"
+                            CornerRadius="40,40,40,40"
+                            Fill="#1A2421" InputTransparent="True"/>
+            <VerticalStackLayout Margin="30,20,30,0">
+                <Label FontAttributes="Bold" 
+                       FontSize="30"
+                       HorizontalOptions="Center"
+                       Text="INICIO SESION"
+                       TextColor="White"
+                       />
+
+                <Grid Margin="0,40,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle Opacity="0"
+                                    CornerRadius="10"
+                                    HeightRequest="60"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="50"/>
+                    <Image Aspect="Center" Source="usuario.png"/>
+                    <Entry 
+                        Margin="5,0,0,0"
+                        Grid.Column="1"
+                        Placeholder="USUARIO"
+                        VerticalOptions="Center"/>
+                </Grid>
+
+                <Grid Margin="0,40,0,0" ColumnDefinitions=".2*,.8*">
+                    <RoundRectangle Opacity="0"
+                                    CornerRadius="10"
+                                    HeightRequest="65"
+                                    HorizontalOptions="Center"
+                                    VerticalOptions="Center"
+                                    WidthRequest="35"/>
+                    <Image Aspect="Center" Source="contrasenia.png"/>
+                    
+                    <Entry 
+                        Margin="5,15,0,0"
+                        Grid.Column="1"
+                        Placeholder="CONTRASEÑA"
+                        IsPassword="True"
+                        VerticalOptions="Center"/>
+
+                </Grid>
+
+                <Grid ColumnDefinitions=".5*,.5*">
+                    
+                    <Button 
+                        Grid.Column="1"
+                        Margin="0,70,390,0"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        HeightRequest="45"
+                        Text="INGRESAR"
+                        FontSize="20"
+                        WidthRequest="145"
+                        CornerRadius="50"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"/>
+                    
+                    <Button 
+                        Grid.Column="2" 
+                        Margin="30,70,0,0"
+                        BackgroundColor="Black"
+                        TextColor="White"
+                        HeightRequest="45"
+                        FontSize="20"
+                        CornerRadius="50"
+                        WidthRequest="145"
+                        Text="REGISTRARSE"
+                        VerticalOptions="Center"
+                        HorizontalOptions="Center"
+                        Clicked="btnRegistrarse_Clicked"/>
+                </Grid>
+
+
+                <Grid ColumnDefinitions=".2*,.8*">
+                    <Label Grid.Column="1"
+                             Margin="-75,20,200,0"
+                             HorizontalOptions="Center"
+                             VerticalOptions="Center"
+                             Text="Olvidaste tu contraseña?"
+                             TextColor="Blue"
+                             TextDecorations="Underline"/>
+                    <Label Grid.Column="2"
+                              
+                              Margin="135,20,0,0"
+                              HorizontalOptions="Center"
+                              Text="No tienes cuenta aún?"
+                              TextColor="White"/>
+                </Grid>
+               
+                
+            </VerticalStackLayout>
+        </Grid>
+    </Grid>
+</ContentPage>
